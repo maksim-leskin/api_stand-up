@@ -37,6 +37,7 @@ export const handleUpdateClient = async (req, res, ticketNumber) => {
 
     if (clientIndex === -1) {
       sendError(res, 404, "Клиент с данныи номером билета не найден");
+      return;
     }
 
     clients[clientIndex] = {
